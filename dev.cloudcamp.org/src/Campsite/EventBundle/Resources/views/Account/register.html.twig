@@ -1,0 +1,99 @@
+{% extends 'CampsiteEventBundle::layout.html.twig' %}
+ {% block stylesheets %}
+  {{ parent() }}
+  <link rel= "stylesheet" href="{{ asset('css/layout_marketingcamp.css')}}">
+   
+ {% endblock %}
+{% block innercontent %}
+<br class="clr">
+<br>
+<div id="content">
+<div class="clear"></div>
+<h1>Create MarketingCamp Account</h1>
+
+<div class="registration-requirements">
+<p>Participation in MarketingCamp requires an account.</p>
+</div>
+
+<form action="" method="POST" class="fos_user_registration_register form form-horizontal">
+
+
+
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+First name:<span class="required">*</span>
+</label>
+
+{{ form_widget(form.first_name, {'attr' : { 'class':'form-txt'} }) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Last Name:<span class="required">*</span>
+</label>
+{{ form_widget(form.last_name) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Address:<span class="required">*</span>
+</label>
+{{ form_widget(form.address) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+City:<span class="required">*</span>
+</label>
+{{ form_widget(form.city) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+State:<span class="required">*</span>
+</label>
+{{ form_widget(form.state) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Zip Code:<span class="required">*</span>
+</label>
+{{ form_widget(form.zipcode) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Country:<span class="required">*</span>
+</label>
+{{ form_widget(form.country) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Job Title:<span class="required">*</span>
+</label>
+{{ form_widget(form.job_title) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Company:<span class="required">*</span>
+</label>
+{{ form_widget(form.company) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Website:<span class="required">*</span>
+</label>
+{{ form_widget(form.website) }}
+</div>
+<div class="form_row">
+<label for="fos_user_registration_form_username" class="form-lbl required">
+Blog:<span class="required">*</span>
+</label>
+{{ form_widget(form.blog) }}
+</div>
+<p align="center">
+        <button type="submit" class="button btn btn-primary" style="margin-right:340px">Register</button>
+        
+    </p>
+</form>
+                <div class="clear"></div>
+            			
+</div> <!-- end content -->
+<div class="push"></div>
+
+{% endblock %}

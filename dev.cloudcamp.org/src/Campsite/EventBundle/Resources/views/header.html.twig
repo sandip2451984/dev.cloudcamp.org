@@ -1,0 +1,38 @@
+{% block header %}
+	<div id="header-mp"> <!-- begin header -->
+		{% include 'CampsiteEventBundle::top_navigation.html.twig' %}
+		<br class="clr">
+		{% include('CampsiteEventBundle::menu.html.twig') %}
+		
+		<div class="content-slider-bg">
+			{% include('CampsiteEventBundle::slider.html.twig') %}
+		</div>
+	  <script id="addJS">
+			jQuery(document).ready(function($) {
+			// Please note that autoHeight option has some conflicts with options like imageScaleMode, imageAlignCenter and autoScaleSlider
+			// it's recommended to disable them when using autoHeight module
+			  $('#content-slider-1').royalSlider({
+			    autoHeight: true,
+			    arrowsNav: false,
+			    fadeinLoadedSlide: false,
+			    controlNavigationSpacing: 0,
+			    controlNavigation: 'tabs',
+			    imageScaleMode: 'none',
+			    imageAlignCenter:false,
+			    loop: false,
+			    loopRewind: true,
+			    numImagesToPreload: 6,
+			    keyboardNavEnabled: true,
+			    usePreloader: false,
+					autoPlay: {
+			    		enabled: true,
+			    		pauseOnHover: true,
+						delay: 5000
+			    	}
+				});
+			});
+		</script>		
+	
+		{% include 'CampsiteEventBundle::Sponser.html.twig' %}
+	</div> <!-- end header -->
+{% endblock %}

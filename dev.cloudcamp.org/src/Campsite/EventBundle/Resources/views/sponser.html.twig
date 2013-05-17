@@ -1,0 +1,57 @@
+  <div id="intro">
+    <h2>SPONSORS &amp; PARTNERS</h2>
+    <div id="slideshow" class="pics"> <!-- begin jQuery Cycle -->
+
+      <div class="unicusSlides">
+      <a href="http://www.adobe.com/" target="_blank"><img src="{{ asset("img/logo-adobe-lg.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="http://www.verticalresponse.com/" target="_blank"><img src="{{ asset("img/logo-verticalResponse-lg.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="http://www.nokia.com/us-en/" target="_blank"><img src="{{ asset("img/logo-nokia-lg.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="http://www.svforum.org" target="_blank"><img src="{{ asset("img/logo-svforum-lg.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="http://www.cloudcamp.org/" target="_blank"><img src="{{ asset("img/logo-cloudcamp-lg.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="http://www.takeflightgraphics.com" target="_blank"><img src="{{ asset("img/logo-tfg-lg.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="javascript:void(0)" target="_blank"><img src="{{ asset("img/sponsor-mcsf.gif") }}" width="300" height="249" alt=""></a>
+      </div>
+      
+      <div class="unicusSlides">
+      <a href="javascript:void(0)" target="_blank"><img src="{{ asset("img/view-topics-vote.gif") }}" alt="" width="300" height="249"></a>
+      </div>
+  
+  </div><!-- end jQuery Cycle -->
+  
+  <ul id="bullets"></ul> <!-- nav bullets -->
+  
+  </div><!-- end intro -->
+  
+  <script type="text/javascript">		
+      $(function() {
+          $('#slideshow').cycle({
+          fx:     'scrollHorz',
+          speed:  400,
+          timeout: 6000,
+          cleartypeNoBg: true,
+          pager:  '#bullets',
+          pagerAnchorBuilder: function paginate(idx, el) {
+          return '<a class="service' + idx + '" href="#" >&bull;</a>';
+      }
+      });
+  });
+  </script>
+  <br class="clr">

@@ -1,0 +1,47 @@
+{% extends 'CampsiteEventBundle::layout.html.twig' %}
+{% block innercontent %}
+<br class="clr">
+<div id="content">
+  {% include 'CampsiteEventBundle::right_content.html.twig' %}
+  
+	<div id="row1">
+		<div class="cBx1">
+			<h2><a href="#">{{ event.name }}</a></h2>
+			<table summary="MarketingCamp unConference Info" class="tblStyle">
+				<tbody>
+					<tr>
+						<td width="35%"><strong>DATE:</strong></td>
+						<td width="65%">{{ event.fromDate | date('d/m/Y') }} - {{ event.toDate | date('d/m/Y') }}</td>
+					</tr>
+					<tr>
+						<td><strong>TIME:</strong></td>
+						<td><span id="from_time">{{ event.fromDate | date('h:s') }}</span> - <span id="to_time">{{ event.toDate | date('h:s') }} </span></td>
+					</tr>
+					<tr>
+						<td><strong>LOCATION:</strong></td>
+						<td>{{event.address}}<br>{{ event.city}} ,{{ event.state}}, {{ event.country }} -{{ event.zipCode }}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		<p class="right spcr-t"><a href="{{path('register')}}" target="_blank" class="btnLg">Register Now ></a></p>
+
+		</div> <!-- end of class cBx1 -->
+		<!-- Map Class -->
+		<div class="cBx2">
+			{% set address = event.address~'+'~event.city ~'+'~event.state ~'+'~event.country %}
+			{% render 'CampsiteEventBundle:Event:getGoogleMapAddress' with { address:address} %}
+		</div> <!-- end of class cBx2 -->
+		
+	</div> <!-- end of div id row 1-->
+	
+	
+     {% include('CampsiteEventBundle:Event:attendees.html.twig') with {'attendees':attendees} %}	
+  </div>
+   
+	<div class="clr"></div>	
+</div> <!-- end content -->
+
+<div class="push"></div>
+
+{% endblock %}
