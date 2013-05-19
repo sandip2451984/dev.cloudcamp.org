@@ -23,11 +23,9 @@
 					</tr>
 				</tbody>
 			</table>
-			
-<p class="right spcr-t"><a href="{{path('register')}}"  class="btnLg">Register Now > </a> </p>
-
-		</div> <!-- end of class cBx1 -->
-		<!-- Map Class -->
+		<p class="right spcr-t"><a href="{{path('register')}}"  class="btnLg">Register Now > </a> </p>
+    </div> <!-- end of class cBx1 -->
+		<!-- Displaying Map -->
 		<div class="cBx2">
 			{% set address = event.address~'+'~event.city ~'+'~event.state ~'+'~event.country %}
 			{% render 'CampsiteEventBundle:Event:getGoogleMapAddress' with { address:address} %}
